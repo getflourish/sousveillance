@@ -15,8 +15,13 @@
     <script type="text/javascript">
         $(document).ready(function () {
             var toc = $(".table-of-contents");
+            var initialX;
+
+            toc.on("mouseenter", function (event) {
+                initialX = event.pageX;
+            })
             toc.on("mousemove", function (event) {
-                var scrollLeft = ($(this)[0].scrollWidth / $(window).width()) * event.pageX;
+                var scrollLeft = ($(this)[0].scrollWidth / $(window).width()) * event.pageX - $(window).width() / 2;
                 $(this).scrollLeft(scrollLeft);
             })
         })
