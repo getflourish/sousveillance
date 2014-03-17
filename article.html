@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css" media="all">
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="js/p5.js"></script>
     <script type="text/javascript" src="js/trail.js"></script>
@@ -11,13 +12,103 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var toc = $(".table-of-contents");
+            toc.on("mousemove", function (event) {
+                var scrollLeft = ($(this)[0].scrollWidth / $(window).width()) * event.pageX;
+                $(this).scrollLeft(scrollLeft);
+            })
+        })
+    </script>
+    <div class="table-of-contents-wrap animated slideInDown table-of-contents-hidden">
+        <ol class="table-of-contents">
+            <li class="table-of-contents-item"><a href="">Einleitung</a>
+                <ul>
+                    <li>Vorgeschichte</li>
+                    <li>Über diese Arbeit</li>
+                    <li>Überwachungsgesellschaft</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Abstract</li>
+            <li class="table-of-contents-item">Überwachung
+                 <ul>
+                     <li>Voir, pouvoir, savoir</li>
+                     <li>Das Panopticon von Bentham</li>
+                     <li>Überwachungsgesellschaft</li>
+                 </ul>
+            </li>
+            <li class="table-of-contents-item">Die Beschleunigung der Fotografie
+                <ul>
+                    <li>Starre Fotografie</li>
+                    <li>Lebendige Fotografie</li>
+                    <li>Sofortbildfotografie</li>
+                    <li>Echtzeitfotografie</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Photosharing im digitalen Zeitalter
+                <ul>
+                    <li>Fotos pro Sekunde</li>
+                    <li>Snapchat</li>
+                    <li>Instagram</li>
+                    <li>Flickr</li>
+                    <li>Flock</li>
+                    <li>Splendor</li>
+                    <li>Kritik an der Schnelllebigkeit der Bilder</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Fotografie von Menschen im öffentlichen Raum
+                <ul>
+                    <li>Rechte und Gesetze</li>
+                    <li>Das Urheberrecht</li>
+                    <li>Das Nutzungsrecht</li>
+                    <li>Das Recht am eigenen Bild</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Tragbare Kameras
+                <ul>
+                    <li>Kartografie des Lebens</li>
+                    <li>Wearcam</li>
+                    <li>Memoto</li>
+                    <li>GoPro</li>
+                    <li>Google Glass</li>
+                    <li>Kritik an Glass</li>
+                    <li>Eine Frage des Kontextes</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Authentizität der Masse
+                <ul>
+                    <li>Metadaten</li>
+                    <li>Mehrere Perspektiven</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Erinnern und Vergessen
+                <ul>
+                    <li>Sammeln, Speichern, Organisieren</li>
+                    <li>Digitales Verfallsdatum</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Ausblick auf die praktische Arbeit
+                <ul>
+                    <li>Fütterung der Überwachungsmaschinen</li>
+                    <li>Aggregation</li>
+                    <li>Modifikation</li>
+                    <li>Generation</li>
+                </ul>
+            </li>
+        </ol>
+        <span class="table-of-contents-title"><span class="icon">&#xf0a9; </span><strong> Sousveillance</strong>: Im Fokus der Träger und Sammler</span>
+    </div>
+
 
     <header>
+        <span class="icon icon-interactive">&#xf14a;</span>
+        <span class="icon icon-interactive">&#xf14b;</span>
+        <br>
+        <br>
         <h4 class="article-author">Kapitel 2</h4>
         <h2>Überwachung</h2>
-        <div class="underline"></div>
     </header>
-
     <!--<div id="quick-nav"></div>-->
     <!--
 	    <div id="social">
@@ -43,8 +134,7 @@
 	</div>
     -->
     <div class="introduction">
-        Photography served to introduce the panoptican principle into daily life.
-        <small class="author">Geoffrey Batchen, Professor für Geschichte und Fotografie an der Universität von New York City</small>
+        <p class="introduction-text animated fadeInUp">Photography served to introduce the panoptican principle into daily life.<small class="author">Geoffrey Batchen, Professor für Geschichte und Fotografie an der Universität von New York City</small></p>
     </div>
 
 	</header>
@@ -135,26 +225,20 @@
 
     <footer>
         <div class="wrap">
-            <a href="">Contributors</a><span class="bullet">•</span>
-            <a href="">About</a>
+            <a href="">Über diese Arbeit</a>
             <span class="bullet">•</span>
-            <a href="">Contact</a>
+            <a href="">Kontakt</a>
+            <span class="bullet">•</span>
+            <a href="">Twitter</a>
             <br>
             <br>
-            <img src="images/logo.png" width="100px" alt="">
-            <span class="copyright">© 2013 Cresc. Magazine</span>
+            <span class="copyright">Florian Schulz</span>
         </div>
     </footer>
-    <div id="fb-root"></div>
-    <script type="text/javascript" src="scripts.js"></script>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+
+    <div class="introduction">
+        <img src="images/header-title.png" alt="">
+    </div>
 
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
