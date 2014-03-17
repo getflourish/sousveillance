@@ -1,0 +1,62 @@
+.articles {
+    font-size: 1.1em;
+    padding-top: 1em;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    article {
+        opacity: 1;
+    }
+}
+
+article {
+    font-weight: normal;
+    line-height: 1.5em;
+    font-size: 1em;
+    opacity: 0.5;
+    width: 50%;
+    margin: 0 auto;
+
+    -webkit-transition: all 0.2s;
+    &:hover {
+        opacity: 1;
+    }
+
+    span {
+        font-weight: normal;
+        font-size: 1em;
+        margin-bottom: 35px;
+        background: #fff;
+        position: relative;
+        padding: 0px 15px;
+        z-index: 2;
+        display: inline-block;
+
+        a {
+            font-weight: normal;
+            color: lighten($base, 40%);
+
+            &:hover {
+                color: $base;
+                text-decoration: none;
+            }
+        }
+    }
+    img {
+        position: relative;
+        display: block;
+        max-width: 100%;
+        margin: 25px auto;
+    }
+
+    .readmore {
+        font-family: $sans;
+        font-size: 0.7em;
+        padding: 2px 5px;
+        text-transform: uppercase;
+        margin-left: 3px;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
