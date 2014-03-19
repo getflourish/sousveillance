@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/animate.css" media="all">
+    <script type="text/javascript" src="../../jquery.js"></script>
+    <script type="text/javascript" src="../../js/p5.js"></script>
+    <script type="text/javascript" src="../../js/trail.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/dyv0ikf.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var toc = $(".table-of-contents");
+            var initialX;
+
+            toc.on("mouseenter", function (event) {
+                initialX = event.pageX;
+            })
+            toc.on("mousemove", function (event) {
+                var scrollLeft = ($(this)[0].scrollWidth / $(window).width()) * event.pageX - $(window).width() / 2;
+                $(this).scrollLeft(scrollLeft);
+            })
+        })
+    </script>
+    <div class="table-of-contents-wrap animated slideInDown table-of-contents-hidden">
+        <ol class="table-of-contents">
+            <li class="table-of-contents-item"><a href="">Einleitung</a>
+                <ul>
+                    <li>Vorgeschichte</li>
+                    <li>Über diese Arbeit</li>
+                    <li>Überwachungsgesellschaft</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Abstract</li>
+            <li class="table-of-contents-item">Überwachung
+                 <ul>
+                     <li>Voir, pouvoir, savoir</li>
+                     <li>Das Panopticon von Bentham</li>
+                     <li>Überwachungsgesellschaft</li>
+                 </ul>
+            </li>
+            <li class="table-of-contents-item">Die Beschleunigung der Fotografie
+                <ul>
+                    <li>Starre Fotografie</li>
+                    <li>Lebendige Fotografie</li>
+                    <li>Sofortbildfotografie</li>
+                    <li>Echtzeitfotografie</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Photosharing im digitalen Zeitalter
+                <ul>
+                    <li>Fotos pro Sekunde</li>
+                    <li>Snapchat</li>
+                    <li>Instagram</li>
+                    <li>Flickr</li>
+                    <li>Flock</li>
+                    <li>Splendor</li>
+                    <li>Kritik an der Schnelllebigkeit der Bilder</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Fotografie von Menschen im öffentlichen Raum
+                <ul>
+                    <li>Rechte und Gesetze</li>
+                    <li>Das Urheberrecht</li>
+                    <li>Das Nutzungsrecht</li>
+                    <li>Das Recht am eigenen Bild</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Tragbare Kameras
+                <ul>
+                    <li>Kartografie des Lebens</li>
+                    <li>Wearcam</li>
+                    <li>Memoto</li>
+                    <li>GoPro</li>
+                    <li>Google Glass</li>
+                    <li>Kritik an Glass</li>
+                    <li>Eine Frage des Kontextes</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Authentizität der Masse
+                <ul>
+                    <li>Metadaten</li>
+                    <li>Mehrere Perspektiven</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Erinnern und Vergessen
+                <ul>
+                    <li>Sammeln, Speichern, Organisieren</li>
+                    <li>Digitales Verfallsdatum</li>
+                </ul>
+            </li>
+            <li class="table-of-contents-item">Ausblick auf die praktische Arbeit
+                <ul>
+                    <li>Fütterung der Überwachungsmaschinen</li>
+                    <li>Aggregation</li>
+                    <li>Modifikation</li>
+                    <li>Generation</li>
+                </ul>
+            </li>
+        </ol>
+        <span class="table-of-contents-title"><span class="icon">&#xf0a9; </span><strong> Sousveillance</strong>: Im Fokus der Träger und Sammler</span>
+    </div>
+
+    <header>
+        <span class="icon icon-interactive">&#xf14a;</span>
+        <span class="icon icon-interactive">&#xf14b;</span>
+        <br>
+        <br>
+        <h4 class="article-author">Kapitel 3</h4>
+        <h2>Die Beschleunigung der Fotografie</h2>
+    </header>
+
+    <div class="introduction">
+        <p class="introduction-text animated fadeInUp">You can photograph anything now.<small class="author">Robert Frank, Fotograf (1961)</small></p>
+    </div>
+
+	</header>
+    <div class="articles">
+        <article>
+        <h3>Starre Fotografie</h3>
+            <p>
+                Vor der Erfindung der Fotografie waren Malerei und Bildhauerei die Mittel, um Abbilder der Welt und der Menschen zu schaffen. Dabei entstanden aufwändig produzierte Einzelstücke, denn eine realitätsgetreue Interpretation des Sujets setzte Geschick und Wissen der Künstler voraus. Der zeitliche Aufwand richtete sich nach dem Detailreichtum des Motivs.
+            </p>
+            <p>
+                Das vom französischen Künstler und Physiker Louis Daguerre entwickelte fotografische Verfahren löste ab 1839 das Handwerk durch einen technischen Prozess ab. Dies führte laut Wolfgang Ullrich, Professor für Kunstwissenschaft und Medientheorie an der Hochschule für Gestaltung Karlsruhe, zu einer »Veränderung in der Zeitökonomie der visuellen Kultur« (Ullrich, 2013), da sich nun »ein Bild mit vielen Details genauso schnell anfertigen ließ wie eines mit nur wenigen Sujets« (Ullrich, 2013). Die »Öffentlichkeit der zivilisierten Länder [war] geradezu überwältigt […] von den schier grenzenlosen Möglichkeiten einer sozusagen selbsttätigen Darstellung der Wirklichkeit […]« (Lohse, 1969, S. 6).
+            </p>        
+            <p>
+                Die Daguerreotypie bediente sich einer einfachen Lochkamera in Verbindung mit einer lichtempfindlichen Kupferplatte. Das Problem des Verfahrens waren lange Belichtungszeiten von bis zu 30 Minuten, die die Aufnahme von bewegten Szenen unmöglich machten. Noch strikter als in der Malerei mussten porträtierte Personen mit Hilfe von Apparaten fixiert werden und minutenlang in einer Position ausharren »In solcher Prozedur ist der Grund zu suchen, weshalb der Augenausdruck fast aller frühen Porträts, soweit man die Augen überhaupt als solche wahrnehmen kann, von seltsamer Starre ist.« (Lohse, 1969, S. 6)
+            </p>
+            <p>
+                Erst durch die Einführung lichtstarker Petzval-Linsen mit größerem Durchmesser im Jahr 1940 und durch den Einsatz anderer Chemikalien wie Silberchlorid konnte die Belichtungszeit auf wenige Sekunden verkürzt werden. Dies ermöglichte fortan die Fotografie jenseits von Landschaften und Stillleben. Den Fotografen war es aber weiterhin nicht möglich, kurze Augenblicke des Alltags festzuhalten. 1866 definierte Hermann Wilhelm Vogel den »photographischen Moment« noch als eine Belichtungsdauer von drei Sekunden. (Vogel, 1866; zit. n. Lohse, 1969, S. 7) In Folge dessen fehlte es den Fotos an der für das Leben auszeichnenden Bewegung und am sichtbaren Ausdruck von Emotionalität. 
+            </p>
+            <h3>Lebendige Fotografie</h3>
+            <p>
+                Bis dieses Problem gelöst wurde, waren spontan wirkende Aufnahmen nur durch gezielte Inszenierung möglich. 1843 machte zum Beispiel der britische Erfinder Henry Fox Talbot Fotos von Personen an einem Tisch im Garten und inszenierte alle so, dass niemand direkt in die Kamera blickte. Die Aufnahme wirkt beobachtend, natürlich und ungestellt wie das wahre Leben. Unter der Prämisse der Realität als neues Ideal entstand eine Art Beobachtungsästhetik. (vgl. Levin et al., 2002, S. 448)
+            </p>
+            <p>
+                Mit der Weiterentwicklung des fotografischen Verfahrens wurden Aufnahmen von alltäglichen Situationen als Gegenstück zu daguerro­typen Studioaufnahmen möglich. Die Pioniere der Fotografie wie Talbot, Daguerre und Hippolyte Bayard loteten die neuen Möglichkeiten aus und machten fortan unbemerkt Fotos von Menschen auf den Straßen (Levin et al., 2002, S. 448).
+            </p>
+            <p>
+                Obwohl die Kamera nun endlich festhalten konnte, was die Menschen sahen, ließ der Erfindergeist nicht nach. Momentverschlüsse, wie der Schlitzverschluss von Willliam England, eröffneten den Fotografen ab 1880 neue Möglichkeiten zur Visualisierung von Vorgängen, die mit bloßem Auge nicht zu sehen waren: »Tiere, Wassertropfen, Gewehrkugeln wurden nun in ihren Bewegungsabläufen gewissermaßen photographisch seziert« (Lohse, 1969, S. 14). Mit einer Batterie von bis zu 24 Kameras und kurzen Verschlusszeiten bis zu 1/1000 Sekunde konnte Edward Muybridge in seiner Studie The Horse in Motion beweisen, dass, entgegen der damals verbreiteten Annahme, ein Pferd im Galopp für einen kurzen Moment mit keinem seiner Hufe mehr den Boden berührt (vgl. Lohse, 1969, S. 15).
+            </p>
+            <p>
+                Insgesamt dauerte es fast ein halbes Jahrhundert, bis die Fotografie in Form der Daguerreotypie die Labore ihrer Erfinder und Early-Adopter verließ und richtig mobil wurde. Den Durchbruch schaffte Kodak im Jahr 1888 mit der ersten, in großem Maßstab gefertigten Rollfilmkamera. Die 900 Gramm leichte Kodak Nr. 1 ermöglichte es jedermann, auf Studio und Stativ zu verzichten und stattdessen draußen die Welt zu dokumentieren. Da diese Kamera keinen Sucher hatte, konnten Bilder nur in Form von Schnappschüssen in den Holzkasten gebannt werden.
+            </p>
+            <p>
+                Kodak war nicht der erste Hersteller einer handlichen Kamera. Die gleichzeitige Einführung des Entwicklungsdienstes revolutionierte jedoch die Verwendbarkeit von Kameras für jeden, der Kosten und Aufwand einer eigenen Entwicklung scheute. Nun brauchte man sich nur noch auf das Auslösen zu konzentrieren und anschließend die Kamera an Kodak zu schicken. Innerhalb eines Monats erhielt man diese zusammen mit den entwickelten Negativen und Abzügen zurück. Aufgrund der hohen Kosten für Anschaffung und Entwicklung blieb die Kodak Nr. 1 jedoch ein Spielzeug der Wohlhabenden. Erst die Einführung der ein Dollar teuren Brownie im Jahr 1900 brachte die Kamera schließlich in die Hände der breiten Masse.
+            </p>
+            <p>
+                Die Menschen hielten nun auch das fest, was sie zuvor als zu allgemein und unbedeutend erachtet hatten: alltägliche Momente und Banalitäten (Levin et al., 2002, S. 451). Der Begriff Live-Fotografie bezog sich bis dato auf eine Art lebendiger Bildwirkung, die eine »mit allen Sinnen zu fassenden Dichte des Raum- und Lebensgefühls« (Lohse, 1969, S. 17) vermittelte. Im Fotojournalismus des 20. Jahrhunderts sprach man vom sogenannten candid style, was bedeutete, dass ein Bild nur glaubwürdig war, wenn es ungestellt und möglichst realistisch wirkte. Um zu so einem Ergebnis zu kommen, bedurfte es jedoch einiger Ausdauer, Geduld und Achtsamkeit. Die Hauptaufgabe eines Fotojournalisten war es, geduldig den richtigen Moment abzuwarten und dabei jederzeit zu wissen, was wann wo vor sich geht. (vgl. Levin, 2002, S. 454)
+            </p>
+            <h3>Sofortbildfotografie</h3>
+            <p>
+                Zwischen Aufnahme und Entwicklung lag weiterhin viel Zeit. Die Firma Polaroid änderte dies 1948 mit der Einführung der Sofortbildkamera. Das, was sonst in einer Dunkelkammer unter Verwendung von Chemikalien ablief, war bei dieser Kamera im Film integriert. Innerhalb von 15 bis 30 Sekunden konnten damit Fotos entwickelt werden. Die Fotografie wurde so zu einem sozialen Element, das es ermöglichte, Momente festzuhalten und miteinander zu teilen. Anders als im Fotojournalismus konnten die Bilder die Situation unmittelbar reflektieren und für alle Teilnehmer vor Ort greifbar machen.
+            </p>
+            <p>
+                Als der amerikanische Fotograf Robert Frank behauptete, dass man im Jahr 1961 dank der technischen Fortschritte bereits in der Lage war alles zu fotografieren, lag er zwar nicht falsch — er ahnte jedoch nicht, was noch alles möglich werden sollte (Robert Frank; zit. n. Sontag, 2010, S. 187).
+            </p>
+            <h3>Echtzeitfotografie</h3>
+            <p>
+                Das digitale Zeitalter räumte die zeitlichen Barrieren analoger Kameras endgültig aus dem Weg. Hatten die ersten kommerziellen Digitalkameras 1973 noch eine begrenzte Auflösung von 0,01 Megapixel und eine Speicherzeit von 23 Sekunden, ist es heute ohne sichtbare Verzögerung möglich, Bilder auf einem Display anzuzeigen und an andere Orte der Welt zu übertragen. Lichtfeldkameras erfassen räumliche Tiefe und lassen uns den Fokus nachträglich verändern. Smartphones erfassen mit 41-Megapixel-Kameras jedes kleinste Detail. Hochgeschwindigkeitskameras nehmen mehrere Millionen Bilder pro Sekunde auf und erlauben es, Bewegungen nahe der Lichtgeschwindigkeit zu erfassen. 360-Grad-Kameras lassen keinen Winkel unbeobachtet. Die Miniaturisierung und Verbreitung dieser Technologien schafft ein immer detaillierteres Bild der Welt, das wir dank des Internets aus immer mehr Echtzeit-Perspektiven betrachten können. ∞
+            </p>
+        </article>
+    </div>
+    <div class="caption">
+	    <div class="bigwrap">
+	        <h3><a class="scrollPage" id="teasers-start" href="#teasers-start">More Inspire</a></h3>
+	    </div>
+	</div>
+	<section id="teasers">
+	    <div class="bigwrap">
+            <div class="teaser">
+    		    <a href="#">
+    		    <div class="teaser-headline">
+    	            <h2>Interview with Photographer Mary Bowlus</h2>
+    				<hr>
+    	 			<p>Kate Loftus-O'Brien</p>
+    	        </div>
+    		   <img src="images/photo.png" alt="" />
+    		   	</a>
+    		</div>
+    		<div class="teaser">
+    		    <a href="#">
+    		    <div class="teaser-headline">
+    	            <h2>Food in Berlin: Malin Elmlid’s Bread Exchange</h2>
+    				<hr>
+    	 			<p>Kate Loftus-O'Brien</p>
+    	        </div>
+    		   <img src="images/photo2.png" alt="" />
+    		   	</a>
+    		</div>
+    		<div class="teaser">
+    		    <a href="#">
+    		    <div class="teaser-headline">
+    	            <h2>Awesome Illustrations</h2>
+    				<hr>
+    	 			<p>Kate Loftus-O'Brien</p>
+    	        </div>
+    		   <img src="images/photo3.png" alt="" />
+    		   	</a>
+    		</div>
+        </div>
+	</section>
+
+    <footer>
+        <div class="wrap">
+            <a href="">Über diese Arbeit</a>
+            <span class="bullet">•</span>
+            <a href="">Kontakt</a>
+            <span class="bullet">•</span>
+            <a href="">Twitter</a>
+            <br>
+            <br>
+            <span class="copyright">Florian Schulz</span>
+        </div>
+    </footer>
+
+    <div class="introduction">
+        <img src="images/header-title.png" alt="">
+    </div>
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
