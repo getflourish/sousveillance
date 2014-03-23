@@ -1,6 +1,7 @@
 @import "compass";
 
 @import "variables.scss";
+@import "mixins.scss";
 @import "article.scss";
 @import "base.scss";
 @import "carousel.scss";
@@ -31,16 +32,6 @@ body {
     color: $base;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    a {
-		color: $base;
-        -webkit-transition: all 0.2s;
-		font-weight: bold;
-        text-decoration: none;
-    }
-    a:hover {
-        color: $base;
-        text-decoration: underline;
-    }
 }
 
 .wrap {
@@ -366,7 +357,7 @@ section#articles {
 
 footer {
     text-align: center;
-    margin: 85px 0px 100px 0px;
+    margin: 200px 0px 100px 0px;
     font-family: $sans;
     a {
         display: inline;

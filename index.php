@@ -1,3 +1,15 @@
+<?php
+    $id = $_GET["id"];
+
+    $titel = array("2" => "Überwachung", 
+                   "3" => "Die Beschleunigung der Fotografie", 
+                   "4" => "Photosharing im digitalen Zeitalter",
+                   "5" => "Fotografie von Menschen im öffentlichen Raum",
+                   "6" => "Tragbare Kameras",
+                   "7" => "Authentizität der Masse",
+                   "8" => "Erinnern und Vergessen");
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -6,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="all">
     <link rel="stylesheet" type="text/css" href="stylesheets/animate.css" media="all">
     <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="js/outline.js"></script>
     <script type="text/javascript" src="js/p5.js"></script>
     <script type="text/javascript" src="js/trail.js"></script>
     <script type="text/javascript" src="//use.typekit.net/dyv0ikf.js"></script>
@@ -23,7 +36,18 @@
             toc.on("mousemove", function (event) {
                 var scrollLeft = ($(this)[0].scrollWidth / $(window).width()) * event.pageX - $(window).width() / 2;
                 $(this).scrollLeft(scrollLeft);
-            })
+            });
+
+            var myClickHandler = function (element) { 
+                console.log('Clicked element:', element); 
+                $(element).remove();
+                myDomOutline.start();
+            }
+            var myDomOutline = DomOutline({ onClick: myClickHandler });
+            $(document).keyup(function (event) {
+                if (event.which == 32) myDomOutline.start();
+            });
+            
         })
     </script>
     <div class="table-of-contents-wrap animated slideInDown table-of-contents-hidden">
@@ -107,12 +131,12 @@
 
 
     <header>
-        <span class="icon icon-interactive">&#xf14a;</span>
-        <span class="icon icon-interactive">&#xf14b;</span>
+        <a href="index.php?id=<?php echo $id - 1 ?>" class="icon icon-interactive">&#xf14a;</a>
+        <a href="index.php?id=<?php echo $id + 1 ?>" class="icon icon-interactive">&#xf14b;</a>
         <br>
         <br>
-        <h4 class="article-author">Kapitel 2</h4>
-        <h2>Überwachung</h2>
+        <h4 class="article-author">Kapitel <?php echo $id ?></h4>
+        <h2><?php echo $titel[$id] ?></h2>
     </header>
     <!--<div id="quick-nav"></div>-->
     <!--
@@ -138,21 +162,18 @@
     	   	</nav>
 	</div>
     -->
-    <div class="introduction">
-        <p class="introduction-text animated fadeInUp">Photography served to introduce the panoptican principle into daily life.<small class="author">Geoffrey Batchen, Professor für Geschichte und Fotografie an der Universität von New York City</small></p>
-    </div>
-
-	</header>
     <div class="articles">
         <?php
-            include($id + "/article.html");
+            include("kapitel/" . $id . "/article.html");
         ?>
     </div>
+    
+    <!--
     <div class="caption">
-	    <div class="bigwrap">
-	        <h3><a class="scrollPage" id="teasers-start" href="#teasers-start">More Inspire</a></h3>
-	    </div>
-	</div>
+        <div class="bigwrap">
+            <h3><a class="scrollPage" id="teasers-start" href="#teasers-start">More Inspire</a></h3>
+        </div>
+    </div>
 	<section id="teasers">
 	    <div class="bigwrap">
             <div class="teaser">
@@ -187,6 +208,7 @@
     		</div>
         </div>
 	</section>
+    -->
 
     <footer>
         <div class="wrap">
@@ -201,9 +223,6 @@
         </div>
     </footer>
 
-    <div class="introduction">
-        <img src="images/header-title.png" alt="">
-    </div>
 
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>

@@ -25,7 +25,14 @@
 .icon-interactive:hover {
     color: $base;
 }
+a:hover {
+    text-decoration: none;
+}
 
+a {
+    color: $base;
+    text-decoration: none;
+}
 h1 {
     text-align: center;
     font-size: 8em;
@@ -39,6 +46,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-family: $sans;
+    line-height: 1.2em
 }
 h3 {
     text-align: left;
@@ -152,9 +160,7 @@ blockquote small, .author {
 
     cursor: pointer;
 
-    @include transition-property(all);
-    @include transition-duration(0.25s);
-    @include transition-timing-function(ease-in-out);
+    @include default-transition;
 
     &:hover {
         background: #000;
@@ -167,12 +173,10 @@ blockquote small, .author {
 .table-of-contents-wrap {
     text-align: center;
     width: 100%;
-    position: relative;
+    position: absolute;
     top: -280px;
 
-    @include transition-property(all);
-    @include transition-duration(0.25s);
-    @include transition-timing-function(ease-in-out);
+    @include default-transition;
 
     &:hover {
         top: 0px;
@@ -182,4 +186,27 @@ blockquote small, .author {
     display: block;
     margin-top: 20px;
     font-family: $sans;
+}
+
+.anonymous {
+    list-style-type: none;
+    font-family: $sans;
+    padding: 0;
+
+}
+
+.anonymous-item {
+
+    display: inline-block;
+    list-style-type: none;
+
+    margin: 1em 0;
+
+    background: $base;
+
+    @include default-transition;
+
+    &:hover {
+        background: transparent;
+    }
 }

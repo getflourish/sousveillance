@@ -1,16 +1,22 @@
 .introduction {
-    font-style: italic;
-    font-size: 2.2em;
-    line-height: 1.4em;
+    
     height: 100%;
+    padding: 300px 100px;
+    margin-bottom: 3em;
+
+    font-style: italic;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    text-align: center;
+
     background: #000;
     color: #fff;
-    text-align: center;
-    padding: 300px 0px;
+
     cursor: pointer;
 }
 
 .introduction-text  {
+    margin: 0 auto;
 }
 
 .introduction:hover .introduction-text {
