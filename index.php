@@ -1,8 +1,10 @@
 <?php
     $id = $_GET["id"];
+    if (!isset($id)) $id = 1;
 
-    $titel = array("2" => "Überwachung", 
-                   "3" => "Die Beschleunigung der Fotografie", 
+    $titel = array("1" => "Abstract",
+                   "2" => "Überwachung",
+                   "3" => "Die Beschleunigung der Fotografie",
                    "4" => "Photosharing im digitalen Zeitalter",
                    "5" => "Fotografie von Menschen im öffentlichen Raum",
                    "6" => "Tragbare Kameras",
@@ -14,7 +16,8 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sousveillance - Im Fokus der Träger und Sammler</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="all">
     <link rel="stylesheet" type="text/css" href="stylesheets/animate.css" media="all">
     <script type="text/javascript" src="jquery.js"></script>
@@ -25,10 +28,18 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
+    <!--
+        <canvas data-processing-sources="js/tracker.pde"></canvas>
+    -->
     <script type="text/javascript">
         $(document).ready(function () {
             var toc = $(".table-of-contents");
+            var tocwrap = $(".table-of-contents-wrap");
             var initialX;
+
+            tocwrap.on("click", function () {
+                $(this).toggleClass("table-of-contents-hidden");
+            })
 
             toc.on("mouseenter", function (event) {
                 initialX = event.pageX;
@@ -38,8 +49,8 @@
                 $(this).scrollLeft(scrollLeft);
             });
 
-            var myClickHandler = function (element) { 
-                console.log('Clicked element:', element); 
+            var myClickHandler = function (element) {
+                console.log('Clicked element:', element);
                 $(element).remove();
                 myDomOutline.start();
             }
@@ -47,7 +58,7 @@
             $(document).keyup(function (event) {
                 if (event.which == 32) myDomOutline.start();
             });
-            
+
         })
     </script>
     <div class="table-of-contents-wrap animated slideInDown table-of-contents-hidden">
@@ -126,7 +137,7 @@
                 </ul>
             </li>
         </ol>
-        <span class="table-of-contents-title"><span class="icon">&#xf0a9; </span><strong> Sousveillance</strong>: Im Fokus der Träger und Sammler</span>
+        <span class="table-of-contents-title"><span class="icon">&#xf0a9; </span><strong> Table of Contents</strong></span>
     </div>
 
 
@@ -167,7 +178,7 @@
             include("kapitel/" . $id . "/article.html");
         ?>
     </div>
-    
+
     <!--
     <div class="caption">
         <div class="bigwrap">

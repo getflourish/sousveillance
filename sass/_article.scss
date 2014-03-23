@@ -1,5 +1,5 @@
 .articles {
-    font-size: 1.3em;
+    font-size: 1.1em;
     padding-top: 1em;
     max-width: 1500px;
     margin: 0 auto;
@@ -10,10 +10,14 @@
 }
 
 @media only screen
-and (min-width : 1200px)
+and (min-width : 768px)
 {
+
     .articles {
-        font-size: 1.5em;
+        font-size: 1.3em;
+    }
+    article {
+        width: 30em;
     }
 
 }
@@ -23,8 +27,8 @@ article {
     line-height: 1.5em;
     font-size: 1em;
     opacity: 0.5;
-    width: 65%;
     margin: 0 auto;
+    padding: 0 2em;
 
     -webkit-transition: all 0.2s;
     &:hover {

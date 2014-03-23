@@ -503,60 +503,6 @@ iframe {
     background: $base;
 }
 
-/*
-    Media Queries
-*/
-
-@media screen and (max-width: 700px) {
-    body {
-
-    }
-    #social {
-        display: none;
-    }
-    nav {
-        font-size: 0.7em;
-        ul li {
-            margin-right: 10px;
-            &:last-child {
-                margin-right: 0px
-            }
-        }
-    }
-    section#intro {
-        font-size: 0.9em;
-    }
-    #articles {
-        font-size: 1em;
-        img {
-            max-width: 320px;
-        }
-    }
-    .wrap {
-        max-width: 400px;
-    }
-    article {
-        max-width: 320px;
-        opacity: 1;
-    }
-    .readmore {
-        background: #000;
-        display: block;
-        padding: 15px;
-        margin-top: 20px;
-        text-align: center;
-        font-size: 1.3em;
-        font-weight: bold;
-        opacity: 1;
-        color: #fff;
-
-        &:hover {
-            color: #fff;
-            background: #666;
-        }
-    }
-
-}
 #hugelink {
 	width: 100%;
 	height: 100%;

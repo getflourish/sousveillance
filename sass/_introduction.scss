@@ -1,11 +1,11 @@
 .introduction {
     
     height: 100%;
-    padding: 300px 100px;
     margin-bottom: 3em;
+    padding: 10em 2em;
 
     font-style: italic;
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.4em;
     text-align: center;
 
@@ -13,6 +13,16 @@
     color: #fff;
 
     cursor: pointer;
+}
+
+@media only screen
+and (min-width : 768px)
+{
+    .introduction {
+        font-size: 1.3em;
+        padding: 300px 100px;
+    }
+
 }
 
 .introduction-text  {
