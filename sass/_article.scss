@@ -4,6 +4,8 @@
     max-width: 1500px;
     margin: 0 auto;
 
+    @include default-transition;
+
     article {
         opacity: 1;
     }
@@ -23,12 +25,16 @@ and (min-width : 768px)
 }
 
 article {
+
+    margin: 0 auto;
+    padding: 0 2em;
+    position: relative;
+
     font-weight: normal;
     line-height: 1.5em;
     font-size: 1em;
+
     opacity: 0.5;
-    margin: 0 auto;
-    padding: 0 2em;
 
     -webkit-transition: all 0.2s;
     &:hover {
@@ -72,4 +78,12 @@ article {
             opacity: 1;
         }
     }
+}
+figure {
+    margin: 2em 0;
+}
+figcaption {
+    font-size: 0.8em;
+    line-height: 1.3em;
+    color: lighten($base, 20%);
 }

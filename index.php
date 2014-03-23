@@ -43,6 +43,11 @@
 
             toc.on("mouseenter", function (event) {
                 initialX = event.pageX;
+                // $(".articles").addClass("js-fadeout")
+                // $("header").addClass("js-fadeout")
+            })
+            toc.on("mouseleave", function () {
+                // $(".articles").removeClass("js-fadeout");
             })
             toc.on("mousemove", function (event) {
                 var scrollLeft = ($(this)[0].scrollWidth / $(window).width()) * event.pageX - $(window).width() / 2;
@@ -137,7 +142,7 @@
                 </ul>
             </li>
         </ol>
-        <span class="table-of-contents-title"><span class="icon">&#xf0a9; </span><strong> Table of Contents</strong></span>
+        <span class="table-of-contents-title"><span class="icon">&#xf0a9; </span><strong> Inhaltsverzeichnis</strong></span>
     </div>
 
 
